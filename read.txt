@@ -1,0 +1,41 @@
+npm add @apollo/server graphql body-parse cors express
+npm install @as-integrations/express5
+npm install axios
+
+node index.js
+
+http://localhost:8000/graphql
+
+operation
+-------------------
+query getAllTools($getUserID:ID!) {
+  getAllUsers {
+    id
+    name
+    email
+    phone
+  }
+  getTodos {
+    id
+    title
+    completed
+  }
+  getUser(id: $getUserID){
+    id
+    name
+    email
+    phone
+  }
+}
+
+variables
+-------------------
+{
+  "getUserID": "2"
+}
+
+
+
+npx create-react-app client
+npm add @apollo/client graphql
+npm start
